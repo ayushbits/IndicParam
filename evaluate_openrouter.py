@@ -48,18 +48,6 @@ OPENROUTER_MODELS = {
         'temperature': 0.0,
         'supports_system': True
     },
-    'gemini-2.0-flash': {
-        'model_id': 'google/gemini-2.0-flash-exp:free',
-        'max_tokens': 50,
-        'temperature': 0.0,
-        'supports_system': True
-    },
-    'gemini-2.5-pro': {
-        'model_id': 'google/gemini-2.5-pro',
-        'max_tokens': 50,
-        'temperature': 0.0,
-        'supports_system': True
-    }
 }
 
 def create_prompt(row):
