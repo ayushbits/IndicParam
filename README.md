@@ -1,12 +1,12 @@
 ## IndicParam: Benchmark to Evaluate LLMs on Low-Resource Indic Languages
 
-IndicParam is a human-curated benchmark of graduate-level multiple-choice questions (MCQs) for evaluating Large Language Models (LLMs) on **low- and extremely low-resource Indic languages**, following the design of ParamBench but extending it beyond Hindi.
+IndicParam is a human-curated benchmark for evaluating Large Language Models (LLMs) on **low- and extremely low-resource Indic languages**, following the design of ParamBench.
 
 ### Overview
 
-- **Goal**: Assess LLMs on language understanding and general knowledge in under-represented Indic languages under a unified, exam-style MCQ setting.
+- The benchmark contains **13,207 questions** across **11 languages**, plus a separate Sanskrit–English code-mixed set; this repository.
 - **Source**: Official UGC-NET language question papers and answer keys, collected across multiple years and sessions.
-- **Scale**: The benchmark described in the paper contains **13,207 questions** across **11 languages**, plus a separate Sanskrit–English code-mixed set; this repository follows the same schema and may include updated or extended releases.
+
 
 ### Languages and Scripts
 
@@ -23,8 +23,6 @@ Scripts:
 - **Odia (Orya)**: Odia  
 - **Ol Chiki (Olck)**: Santali  
 
-The benchmark explicitly targets languages with **very limited web presence** despite large speaker populations, making them challenging for current LLMs.
-
 ### Dataset and Annotations
 
 The main release in this repository is provided as `data.csv`, with one row per question. Core fields (column names may differ slightly from the paper notation) include:
@@ -36,10 +34,6 @@ The main release in this repository is provided as `data.csv`, with one row per 
 - **correct_answer**: Gold label (`a`/`b`/`c`/`d`).
 - **unique_question_id**: Stable identifier for tracking and de-duplication.
 - **question_type**: Encodes the question format (see below).
-- **difficulty_level**: Difficulty category (e.g., `Easy`, `Medium`, `Hard`), as used in the paper.
-- **classification_response / related fields**: JSON-style or derived annotations for question class (language understanding vs. general knowledge) and other metadata.
-
-Each instance is a **graduate-level, human-authored MCQ** drawn from official exams. Content spans:
 
 - **Language understanding (LU)**: Linguistics and grammar (morphology, syntax, semantics, discourse).
 - **General knowledge (GK)**: Facts, world knowledge, literature, history, and culture.
@@ -54,17 +48,6 @@ Questions are also classified into the six formats used in the paper:
 - **Ordering**
 
 All questions are intended **only for evaluation**, not for model training.
-
-### Task and Evaluation Protocol
-
-The benchmark is framed as a **multiple-choice question answering** task:
-
-- **Input**: Question text and four options (A–D), in the original language/script.
-- **Output**: A single option label (`A`, `B`, `C`, or `D`) with no explanation.
-- **Primary metric**: **Accuracy** (percentage of correctly answered questions), reported:
-  - Per language
-  - Separately for **LU** vs. **GK**
-  - By **question type** (MCQ, A\&R, list matching, etc.), as in the paper
 
 For comparability with the paper:
 
@@ -93,17 +76,6 @@ Script-level arguments and options are documented via the `-h`/`--help` flags wi
 If you use IndicParam in your research or system evaluations, please cite the accompanying paper:
 
 ```bibtex
-@article{maheshwari2025indicparam,
-  title   = {IndicParam: Benchmark to Evaluate LLMs on Low-Resource Indic Languages},
-  author  = {Maheshwari, Ayush and Sharma, Kaushal and Patel, Vivek and Maheshwari, Aditya},
-  journal = {arXiv preprint arXiv:2508.16185},
-  year    = {2025}
-}
+
 ```
 
-Please also cite ParamBench where relevant for Hindi and for the question-type taxonomy.
-
-### License and Ethics
-
-IndicParam is released for **non-commercial research and evaluation**. The questions are sourced from publicly available UGC-NET language papers; annotation was conducted by native speakers as described in the paper.  
-For any commercial or large-scale downstream use, please consult the UGC-NET/UGC–NTA terms and seek appropriate permissions.
