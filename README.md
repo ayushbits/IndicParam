@@ -1,6 +1,11 @@
-## IndicParam: Benchmark to Evaluate LLMs on Low-Resource Indic Languages
+<div align="center">
+  
+[![arXiv](https://img.shields.io/badge/arXiv-2512.00333-f9f107.svg)](https://arxiv.org/pdf/2512.00333)
+[![huggingface](https://img.shields.io/badge/Hugging%20Face-Dataset-orange)](https://huggingface.co/datasets/bharatgenai/IndicParam)
+</div>
 
-IndicParam is a human-curated benchmark for evaluating Large Language Models (LLMs) on **low- and extremely low-resource Indic languages**, following the design of ParamBench.
+## IndicParam: Benchmark to evaluate LLMs on low-resource Indic Languages
+IndicParam is a human-curated benchmark of >13,000 questions for evaluating LLMs on **low- and extremely low-resource Indic languages**. We evaluated 19 LLMs, both proprietary and open-weights, which reveals that even the top-performing GPT-5 reaches only 45% average accuracy, followed by DeepSeek-3.2 (43.1) and Claude-4.5 (42.7).
 
 ### Overview
 
