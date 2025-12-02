@@ -76,6 +76,14 @@ Script-level arguments and options are documented via the `-h`/`--help` flags wi
 If you use IndicParam in your research or system evaluations, please cite the accompanying paper:
 
 ```bibtex
-
+@misc{maheshwari2025indicparambenchmarkevaluatellms,
+      title={IndicParam: Benchmark to evaluate LLMs on low-resource Indic Languages}, 
+      author={Ayush Maheshwari and Kaushal Sharma and Vivek Patel and Aditya Maheshwari},
+      year={2025},
+      eprint={2512.00333},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2512.00333}, 
+}
 ```
 
